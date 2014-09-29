@@ -1,0 +1,13 @@
+.container{
+  width: 80%;
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+ul.list li{
+    font-family: 'Averia Sans'; 
+   font-weight: light; 
+   font-style: normal; 
+   padding: 20px;
+   font-size: 2em;
+}
