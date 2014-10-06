@@ -6,11 +6,11 @@
         <title>Shopping List App</title>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/component.css">
 <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/trocchou" rel="stylesheet" type="text/css"/>
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
-        <script src="js/svgcheckbx.js"></script>       
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>      
         <script src="js/plugins.js"></script>
 
 
@@ -18,16 +18,21 @@
     
     <body>
         <div class="container">
+            <form class="ac-custom ac-list" autocomplete="off">
+                <div class="header">
+                    <input type="text" id="txt-list-input" name="field">
+                    <button type="submit" value="add">add</button>
+                </div>    
             <ol class="list">
-                <li><input type="checkbox" name="input-1"><label>Milk</label></li>
-                <li><input type="checkbox" checked><label>Cheese</label></li>
-                <li><input type="checkbox" checked><label>Bread</label></li>
-                <li><input type="checkbox" checked><label>Chips</label></li>
-                <li><input type="checkbox" checked><label>Dog Food</label></li>
-                <li><input type="checkbox" checked><label>Cereal</label></li>
-            </ol>    
+                        <li><input id="cb18" name="cb18" type="checkbox"><label for="cb18">Chips</label><span class="delete">Delete</span></li>
+                        <li><input id="cb19" name="cb19" type="checkbox"><label for="cb19">Bread</label><span class="delete">Delete</span></li>
+                        <li><input id="cb20" name="cb20" type="checkbox"><label for="cb20">Milk</label><span class="delete">Delete</span></li>
+                        <li><input id="cb21" name="cb21" type="checkbox"><label for="cb21">Cheese</label><span class="delete">Delete</span></li>
+            </ol>
+        </form>
+
         </div>   
     </body>
         <script src="js/app.js"></script>
-
+        <script src="js/svgcheckbx.js"></script>
 </html>

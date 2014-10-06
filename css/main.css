@@ -1,18 +1,41 @@
 .container{
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 ol.list li{
     font-family: 'Trocchou'; 
    font-weight: light; 
    font-style: normal; 
-   padding: 20px;
    font-size: 3em;
-   padding: 1em 1em 0 2em;
+   padding: .5em 1em 0 1.5em;
 text-indent: -40px;
+position: relative;
+
 }
 
+button {
+  float: right;
+  height: 40px;
+  width: 40px;
+}
+
+ol.list li .delete {
+  float: right;
+  font-family: helvetica, sans-serif;
+  font-size: 10px;
+  display: block;
+  top: 5em;
+  position: absolute;
+  right: 0;
+  color: #333;
+}
+
+.delete:hover{
+  color: #000;
+  text-decoration: underline;
+}
 
 ol.list label {
 display: inline-block;
@@ -50,11 +73,50 @@ cursor: pointer;
 }
 
 
+input[type="text"] {
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For all Gecko based browsers */
+          box-sizing: border-box;
+          width: 80%;
+        margin-left: 35px;
+        padding: 10px;
+        font-size: 1em;
 
 
- 
-input[type="checkbox"],
-input[type="radio"],
+}
+
+
+.ac-list svg {
+width: 100%;
+position: absolute;
+height: 80px;
+left: 0;
+top: .75em;
+margin-top: 0px;
+pointer-events: none;
+}
+.ac-list svg path{
+  stroke: #eee;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.ac-list input[type="checkbox"]:checked + label,
+.ac-list input[type="radio"]:checked + label {
+  opacity: 0.5;
+} 
+
+.ac-list input[type="checkbox"]:checked + label::before,
+.ac-list input[type="radio"]:checked + label::before {
+  opacity: 0.8;
+}
+
+
+
+.ac-list input[type="checkbox"],
+.ac-list input[type="radio"],
 label::before {
     width: 50px;
     height: 50px;
@@ -64,15 +126,10 @@ label::before {
     position: absolute;
     cursor: pointer;
 }
-input[type="checkbox"],
-input[type="radio"] {
+.ac-list input[type="checkbox"],
+.ac-list input[type="radio"] {
     opacity: 0;
     display: inline-block;
     vertical-align: middle;
     z-index: 100;
-}
-label::before {
-    content: '';
-    border: 4px solid #fff;
-    transition: opacity 0.3s;
 }
