@@ -14,6 +14,7 @@ $(document).ready(function(){
 
 	$(".delete").click(function(){
 	  $(this).closest("li").remove();
+	  alert("item deleted");
 
 	});
 });
