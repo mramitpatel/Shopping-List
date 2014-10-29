@@ -25,23 +25,28 @@ ol.list li .delete {
   float: right;
   font-family: helvetica, sans-serif;
   font-size: 10px;
-  display: block;
-  top: 5em;
-  position: absolute;
+padding: 5px;
   right: 0;
-  color: #333;
+  color: #EEE;
+  line-height: 44px;
 }
 
-.delete:hover{
-  color: #000;
-  text-decoration: underline;
+.strike {
+  text-decoration: line-through;
+}
+
+
+
+ol.list li .delete:hover{
+  color: #FF3E0F;
+  cursor: pointer;
 }
 
 ol.list label {
 display: inline-block;
 position: relative;
 font-size: 1em;
-padding: 0 0 0 80px;
+padding: 0 0 0 60px;
 vertical-align: top;
 color: rgba(0,0,0,0.2);
 cursor: pointer;
@@ -86,6 +91,10 @@ input[type="text"] {
 }
 
 
+*:focus {
+    outline: 0;
+}
+
 .ac-list svg {
 width: 100%;
 position: absolute;
@@ -105,7 +114,7 @@ pointer-events: none;
 
 .ac-list input[type="checkbox"]:checked + label,
 .ac-list input[type="radio"]:checked + label {
-  opacity: 0.5;
+  opacity: 0.8;
 } 
 
 .ac-list input[type="checkbox"]:checked + label::before,
@@ -128,7 +137,7 @@ label::before {
 }
 .ac-list input[type="checkbox"],
 .ac-list input[type="radio"] {
-    opacity: 0;
+    opacity: .8;
     display: inline-block;
     vertical-align: middle;
     z-index: 100;
